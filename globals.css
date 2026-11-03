@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-beige text-ink font-sans font-light text-[17px] leading-relaxed antialiased; }
+  h1, h2, h3 { @apply font-serif font-medium leading-[1.08]; }
+  :focus-visible { @apply outline outline-2 outline-offset-4 outline-gold; }
+}
+@layer components {
+  .btn { @apply inline-block border border-current px-7 py-3.5 text-[0.98rem] transition duration-300; }
+  .btn-gold { @apply border-gold bg-gold text-ink hover:bg-transparent hover:text-[#f3e9d2]; }
+  .btn-dark { @apply border-gold bg-gold text-ink hover:bg-transparent hover:text-ink; }
+  .h2 { @apply text-4xl md:text-5xl after:mt-5 after:block after:h-0.5 after:w-16 after:bg-gold; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
